@@ -6,6 +6,6 @@ export default class HabitRequest extends Request{
     static teste(){
 
         console.log( this.token, this.url, this.header )
-
+        
     }
 }
