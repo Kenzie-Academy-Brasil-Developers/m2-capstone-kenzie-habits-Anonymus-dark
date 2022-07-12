@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/root.css">
-    <link rel="stylesheet" href="./src/css/index/main.css">
-
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/root.css" />
+    <link rel="stylesheet" href="./src/css/index/main.css" />
+    <link rel="stylesheet" href="./src/css/index/criarHabito.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Kenzie Habit</title>
-
     <script defer type="module" src="./src/js/scripts/main.js"></script>
-
   </head>
   <body>
-    
+    <form id="criarHabitoForm">
+      <h4 id="TextHabito">Criar hábito</h4>
+      <h3 id="exit">X</h3>
+      <label id="textTitulo" for="formLabelTitulo">Título</label>
+      <input type="text" id="formLabelTitulo" placeholder="Digitar título" />
+      <label id="textDescricao" for="formLabelDescricao">Descrição</label>
+      <input
+        type="text"
+        id="formLabelDescricao"
+        placeholder="Digitar descrição"
+      />
+      <label id="textCategoria" for="formLabelCategoria">Categoria</label>
+      <select id="formLabelCategoria" name="categoria">
+        <option value="Defaut">Selecionar categoria</option>
+        <option value="Casa">🏠 Casa</option>
+        <option value="Estudo">📚 Estudo</option>
+        <option value="Lazer">⛱️ Lazer</option>
+        <option value="Trabalho">📊 Trabalho</option>
+        <option value="Saude">💜 Saude</option>
+      </select>
+      <input type="submit" id="btnForm" value="Inserir" />
+    </form>
   </body>
 </html>
