@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/root.css">
+    <link rel="stylesheet" href="./src/css/index/excluirHabit.css">
     <link rel="stylesheet" href="./src/css/index/main.css">
 
     <meta charset="UTF-8" />
@@ -136,5 +137,26 @@
 
     <button class="carregarMais">Carregar mais</button>
     
+    <div class="modalExcluir">
+
+      <div class="modalExcluir__cabecalhoExcluir">
+        <h3 class="cabecalhoExcluir__titulo">Excluir Hábito</h3>
+        <button class="cabecalhoExcluir__titulo">
+          <img class="" src="./src/assets/img/fechar.png" alt="">
+        </button>
+      </div>
+
+      <div class="modalExcluir__blocoInformacoes"> 
+        <p class="blocoInformacoes__descricao-primaria">Certeza que deseja excluir este hábito?</p>
+        <span class="blocoInformacoes__descricao-secundaria">Após executar essa ação não será possivel desfazer</span>
+      </div>
+
+      <nav class="modalExcluir__navegacao">
+        <button class="navegacao__cancelar">Cancelar</button>
+        <button class="navegacao__excluir">Sim, excluir este hábito</button>
+      </nav>
+
+    </div>
+
   </body>
 </html>
