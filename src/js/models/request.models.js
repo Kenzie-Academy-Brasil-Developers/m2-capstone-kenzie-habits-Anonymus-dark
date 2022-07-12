@@ -6,6 +6,6 @@ export default class Request {
 
     static header = {
         "Content-Type":"application/json",
-        "Authorization": `Bearer ${ this.token }`
+        "Authorization": `Bearer ${this.token}`
     }
 }
