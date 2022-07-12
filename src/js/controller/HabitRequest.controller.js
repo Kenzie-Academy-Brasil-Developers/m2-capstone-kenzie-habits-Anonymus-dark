@@ -2,8 +2,6 @@ import Request from "../models/request.models.js"
 
 export default class HabitRequest extends Request {
 
-
-    // this.token ou this.url ou this.header
     static async createHabit(newHabit) {
         return await fetch(`${this.url}/habits`, {
             method: 'POST',
@@ -65,10 +63,4 @@ export default class HabitRequest extends Request {
             .then(res => res)
             .catch(err => console.log(err))
     }
-
-    // static teste(){
-
-    //     console.log( this.token, this.url, this.header )
-
-    // }
 }
