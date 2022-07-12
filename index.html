@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./src/css/root.css">
     <link rel="stylesheet" href="./src/css/index/criarHabito.css" />
     <link rel="stylesheet" href="./src/css/index/excluirHabit.css">
+    <link rel="stylesheet" href="./src/css/index/editarHabito.css">
     <link rel="stylesheet" href="./src/css/index/main.css">
     <link rel="stylesheet" href="./src/css/index/editarPerfil.css">
 
@@ -197,10 +198,51 @@
       <input type="url" id="formEditarFoto" placeholder="https://imagem.com.br">
       <input type="submit" id="btnEditar" value="Salvar alterações">
 
-
-
     </form>
 
+    <div class="modal">
+      <div class="container">
+          <div class="modal__board">
+              <div class="modal__header">
+                  <span>Editar hábito</span>
+                  <button type="button">X</button>
+              </div>
+              <form class="modal__form">
+                  <div class="modal__form__divs">
+                  <label for="título">Título</label>
+                  <input type="text" name="título" id="título">
+                  </div>
+
+                  <div class="modal__form__divs">
+                  <label for="descrição">Descrição</label>
+                  <input type="text" name="descrição" id="descrição">
+                  </div>
+
+                  <div class="modal__form__divs">
+                  <label for="categoria">Categoria</label>
+                  <select name="categoria" id="categoria">
+                      <option value="Selecionar">Selecionar categoria</option>
+                      <option value="casa">🏠 casa</option>
+                      <option value="estudo">📚 estudo</option>
+                      <option value="lazer">⛱ lazer</option>
+                      <option value="trabalho">📊 trabalho</option>
+                      <option value="saúde">💜 saúde</option>
+                  </select>
+                  </div>
+
+                  <div class="modal__checkbox">
+                      <label for="status">Status</label>
+                      <input type="checkbox" name="status" id="status">
+                  </div>
+
+                  <div class="modal__buttons">
+                      <button type="button" id="excluir">Excluir</button>
+                      <button type="submit" id="salvar">Salvar alterações</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
 
   </body>
 </html>
