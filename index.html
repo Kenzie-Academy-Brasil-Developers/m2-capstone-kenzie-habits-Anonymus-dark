@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./src/css/index/excluirHabit.css">
     <link rel="stylesheet" href="./src/css/index/editarHabito.css">
     <link rel="stylesheet" href="./src/css/index/main.css">
+    <link rel="stylesheet" href="./src/css/index/editarPerfil.css">
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -187,6 +188,18 @@
       <input type="submit" id="btnForm" value="Inserir" />
     </form>
 
+    <form id="editarPerfil">
+
+      <h4 id="editarPerfilText">Editar perfil</h4>
+      <h3>X</h3>
+      <label id="textNome" for="formEditarNome">Nome</label>
+      <input type="text" id="formEditarNome" placeholder="Júlia Silva Camargo">
+      <label id="textImagem" for="formLabelFoto">URL da imagem do perfil</label>
+      <input type="url" id="formEditarFoto" placeholder="https://imagem.com.br">
+      <input type="submit" id="btnEditar" value="Salvar alterações">
+
+    </form>
+
     <div class="modal">
       <div class="container">
           <div class="modal__board">
@@ -230,5 +243,6 @@
           </div>
       </div>
   </div>
+
   </body>
 </html>
