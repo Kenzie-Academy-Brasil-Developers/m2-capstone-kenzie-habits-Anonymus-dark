@@ -6,7 +6,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    display: none;
+    display: none; 
 }
 .container{
     display: flex;
@@ -16,13 +16,13 @@
     height: inherit;
 } 
 .modal__board{
-    width: 502px;
-    height: 550px;
+    width: 305px;
+    height: 466px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #FFFFFF;
-    padding: 38px 32px 32px 32px;
+    padding: 30px 14px 24px;
 }
 .modal__header{
     color: #212529;
@@ -59,6 +59,7 @@
     padding: 9px 18px;
     border: 2px solid #F1F3F5;
     height: 40px;
+    width: 277px;
 }
 #descrição{
     background-color: rgba(var(--cor-grey-5));
@@ -67,6 +68,7 @@
     padding: 9px 18px; 
     border: 2px solid #F1F3F5;
     height: 80px;
+    width: 277px;
 }
 #categoria{
     color: #343A40;
@@ -78,6 +80,8 @@
     font-weight: var(--font-text-2-4-grossura);
     font-size: var(--font-text-2-tamanho);
     font-family: var(--font-inter);
+    height: 40px;
+    width: 277px;
 }
 option{
     font-size: var(--font-text-2-tamanho);
@@ -108,6 +112,8 @@ option{
     background-color: rgba(var(--cor-grey-5));
     border: 2px solid #F1F3F5;
     border-radius: 4px;
+    cursor: pointer;
+    width: 120px;
 }
 #salvar{
     color: #FFFFFF;
@@ -119,4 +125,30 @@ option{
     font-size: var(--font-text-2-tamanho);
     font-family: var(--font-inter);
     font-weight: var(--font-title-grossura);
+    width: 151px;
+}
+@media (min-width:768px) {
+    .modal__board{
+        height: 482px;
+        width: 502px;
+        padding: 34px 32px 32px;
+    }
+    #título{
+        height: 40px;
+        width: 438px;
+    }
+    #descrição{
+        height: 80px;
+        width: 438px;
+    }
+    #categoria{
+        height: 40px;
+        width: 438px;
+    }
+    #excluir{
+        width: 191px;
+    }
+    #salvar{
+        width: 239px;
+    }
 }
