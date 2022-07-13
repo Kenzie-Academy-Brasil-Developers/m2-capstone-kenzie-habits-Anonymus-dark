@@ -9,23 +9,25 @@ export default class tabelaEvent {
 
     handleEvent( event ){
 
-        const { target:{ name, className } } = event
+        const { target:{ name, className, checked } } = event
 
-        this.checkbox( name )
+        this.checkbox( checked, name )
 
-        this.editar( className )        
+        this.editar( event, className )        
 
     }
 
-    checkbox( name ){
+    checkbox( checked, name ){  
 
         if( name === "habit_status" ){
-      
+            
+            console.log( checked)
+
         }
 
     }
 
-    editar( className ){
+    editar( event, className ){
         
         if( className === "editarHabit__botaoEditar" || className === "botaoEditar__imagem" ){
          
