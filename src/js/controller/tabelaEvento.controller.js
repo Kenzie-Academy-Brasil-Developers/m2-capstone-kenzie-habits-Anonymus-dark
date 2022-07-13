@@ -1,3 +1,6 @@
+import HabitosAPI from "../controller/renderizarHabitos.controller.js"
+import HabitRequest from "../controller/HabitRequest.controller.js"
+
 export default class tabelaEvent {
 
     constructor(){
@@ -11,17 +14,21 @@ export default class tabelaEvent {
 
         const { target:{ name, className, checked } } = event
 
-        this.checkbox( checked, name )
+        const id = event.path[2].id
+
+        this.checkbox( checked, name, id )
 
         this.editar( event, className )        
 
     }
 
-    checkbox( checked, name ){  
+    async checkbox( checked, name, id ){  
 
-        if( name === "habit_status" ){
+        if( name === "habit_status" && checked === true){
             
-            console.log( checked)
+            await HabitRequest.completeHabit( id )
+            
+            await HabitosAPI.renderiarHabitos()
 
         }
 
