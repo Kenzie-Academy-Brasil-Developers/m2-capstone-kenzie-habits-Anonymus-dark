@@ -4,7 +4,7 @@ import Habito from "../models/cardHabito.model.js"
 
 Habito.criar({
     "habit_id": 655,
-    "habit_title": "teste myke",
+    "habit_title": "Raul",
     "habit_description": "apenas um post para testar no insomia",
     "habit_category": "saude",
     "habit_status": true
