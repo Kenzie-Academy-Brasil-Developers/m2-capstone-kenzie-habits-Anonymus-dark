@@ -13,12 +13,14 @@ export default class FiltroMain {
 
         const { target:{ innerText } } = event
 
-        this.carrgarTodos( innerText )
+        this.carregarTodos( innerText )
 
-        this.carrgarConcluidos( innerText )
+        this.carregarConcluidos( innerText )
+
+        this.abrirCriarHabitos(innerText)
     }
 
-    carrgarTodos( innerText ){
+    carregarTodos( innerText ){
 
         if( innerText === "Todos" ){
 
@@ -27,12 +29,19 @@ export default class FiltroMain {
 
     }
 
-    carrgarConcluidos( innerText ){
+    carregarConcluidos( innerText ){
 
         if( innerText === "Concluidos" ){
             
             HabitosAPI.renderizarHabitosConcluidos()
         }
 
+    }
+
+    abrirCriarHabitos(innerText){
+        const botaoCriar = document.getElementById("criarHabitoForm")
+        if(innerText === "Criar"){
+            botaoCriar.style.display = "unset"
+        }
     }
 }
