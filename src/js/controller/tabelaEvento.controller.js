@@ -29,15 +29,19 @@ export default class tabelaEvent {
             await HabitRequest.completeHabit( id )
             
             await HabitosAPI.renderiarHabitos()
-
         }
 
     }
 
     editar( event, className ){
         
-        if( className === "editarHabit__botaoEditar" || className === "botaoEditar__imagem" ){
+        if( className === "botaoEditar__imagem" ){
          
+            const id = event.path[3].id
+
+            const modalEditar = document.querySelector(".modal")
+            modalEditar.style.display = "unset"
+            modalEditar.id = id
         }
     }
 }
