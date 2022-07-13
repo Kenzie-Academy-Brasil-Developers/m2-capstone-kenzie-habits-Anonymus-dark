@@ -8,6 +8,10 @@ export default class Habito {
         body__bloco.classList.add("body__bloco")
         body__bloco.id = objHabito.habit_id
 
+        if( objHabito.habit_status === true ){
+            body__bloco.style.background = "#F1F3F5"
+        }
+
         const checkbox = Habito.criarCheckbox( objHabito )
 
         const titulo = Habito.criarTitulo( objHabito )
@@ -33,6 +37,11 @@ export default class Habito {
         input.type = "checkbox"
         input.name = "habit_status"
 
+        if( objHabito.habit_status === true ){
+            input.checked = true
+            input.disabled = true
+        }
+
         td.appendChild( input )
 
         return td
@@ -43,6 +52,10 @@ export default class Habito {
         const td = document.createElement("td")
         td.classList.add("geralBody", "bloco__tituloHabit")
         td.innerText = objHabito.habit_title
+
+        if( objHabito.habit_status === true ){
+            td.style.textDecoration = "line-through"
+        }
 
         return td
     }

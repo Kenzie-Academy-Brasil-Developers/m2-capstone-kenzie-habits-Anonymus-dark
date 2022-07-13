@@ -1,13 +1,9 @@
-import HabitRequest from "../controller/HabitRequest.controller.js"
 import tabelaEvent from "../controller/tabelaEvento.controller.js"
-import Habito from "../models/cardHabito.model.js"
-
-Habito.criar({
-    "habit_id": 655,
-    "habit_title": "Raul",
-    "habit_description": "apenas um post para testar no insomia",
-    "habit_category": "saude",
-    "habit_status": true
-})
+import HabitosAPI from "../controller/renderizarHabitos.controller.js"
+import FiltroMain from "../controller/filtroMain.controller.js"
 
 const botoesTabela = new tabelaEvent()
+
+const navegacaoTabela = new FiltroMain()
+
+HabitosAPI.renderiarHabitos()
