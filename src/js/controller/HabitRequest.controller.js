@@ -45,7 +45,7 @@ export default class HabitRequest extends Request {
     }
     
     static async completeHabit(id) {
-        return await fetch(`${this.url}/habits/${id}`, {
+        return await fetch(`${this.url}/habits/complete/${id}`, {
             method: 'PATCH',
             headers: this.header
         })
