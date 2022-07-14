@@ -9,7 +9,8 @@ export default class HabitRequest extends Request {
             body: JSON.stringify(newHabit)
         })
             .then(res => res.json())
-            .then(res => res)
+            .then(res => {console.log(res)
+                return res})
             .catch(err => console.log(err))
     }
     
