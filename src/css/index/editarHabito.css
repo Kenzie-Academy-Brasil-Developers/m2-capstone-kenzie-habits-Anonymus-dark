@@ -138,6 +138,7 @@ option{
     font-family: var(--font-inter);
     font-weight: var(--font-title-grossura);
     width: 151px;
+    cursor: pointer;
 }
 @media (min-width:768px) {
     .modal__board{

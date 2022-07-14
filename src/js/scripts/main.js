@@ -5,6 +5,7 @@ import EditarHabito from "../controller/modalEditarHabito.controller.js"
 import ModalExcluir from "../controller/modalExcluir.controller.js"
 import PegarInfHabito from "../controller/pegarInfHabito.js"
 import LoginMain from "../controller/loginMain.controller.js"
+import CarregarMais from "../controller/carregarMais.controller.js"
 
 const botoesTabela = new tabelaEvent()
 
@@ -15,6 +16,8 @@ const navegacaoModalEditar = new EditarHabito()
 const navegacaoModalExcluir = new ModalExcluir()
 
 const navegacaoModalCriarHabite = new PegarInfHabito()
+
+const botaoCarregarMais = new CarregarMais()
 
 HabitosAPI.renderiarHabitos()
 
