@@ -23,7 +23,10 @@ export default class ModalExcluir {
     cancelar( innerText ){
 
         if( innerText === "Cancelar"){
+
+            const editarHabito = document.querySelector(".modal")
             this.blocoPai.style.display = "none"
+            editarHabito.style.display = "unset"
         }
     }
 
