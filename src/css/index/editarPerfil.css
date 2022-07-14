@@ -13,6 +13,19 @@
 
   background-color: #FFFFFF;
   border-radius: 8px;
+
+  -webkit-animation: modal-animation 0.5s;
+  animation: modal-animation 0.5s;
+}
+@keyframes modal-animation {
+  0%{
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+  100%{
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
 }
 
 @media screen and (max-width: 800px) {

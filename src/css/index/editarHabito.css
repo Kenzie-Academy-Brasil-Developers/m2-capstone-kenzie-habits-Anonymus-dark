@@ -23,13 +23,25 @@
     justify-content: space-between;
     background-color: #FFFFFF;
     padding: 30px 14px 24px;
+    -webkit-animation: modal-animation 0.5s;
+    animation: modal-animation 0.5s;
+}
+@keyframes modal-animation {
+    0%{
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100%{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
 }
 .modal__header{
     color: #212529;
     display: flex;
     justify-content: space-between;
     font-family: var(--font-inter);
-    font-size: var(--font-title-4-tamanho);
+    font-size: var(--font-title-5-tamanho);
     font-weight: 600;
 }
 .modal__header > button{
@@ -129,9 +141,9 @@ option{
 }
 @media (min-width:768px) {
     .modal__board{
-        height: 482px;
+        height: 550px;
         width: 502px;
-        padding: 34px 32px 32px;
+        padding: 38px 32px 32px;
     }
     #título{
         height: 40px;
