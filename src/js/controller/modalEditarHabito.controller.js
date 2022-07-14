@@ -13,13 +13,13 @@ export default class EditarHabito {
 
     async handleEvent(event) {
 
-        event.preventDefault()
-
+        const data = {}
+        
+        const id = event.path[5].id
         const innerText = event.target.innerText
-
+        
         const className = event.target.className
-        // console.log(event.target)
-        // console.log(event.path[5].id)
+        
         if (innerText === 'X') {
             const modal = document.querySelector('.modal')
             modal.style.display = 'none'
@@ -31,24 +31,29 @@ export default class EditarHabito {
         }
         if(innerText === "Excluir"){
             
-            const id = event.path[5].id
             const modalExcluir = document.querySelector('.fundo-background')
             
             this.modal.style.display = 'none'
             modalExcluir.style.display = 'flex'
             modalExcluir.id = id
-            
-            // window.location.href = "../../../index.html"
+
         }
         if(innerText === 'Salvar alterações'){
-            const data = {}
+            
+            event.preventDefault()
+            
             const formValue = [...event.srcElement.form]
-            formValue.forEach((input) =>{
-                if(input.value !== ''){
+            formValue.forEach(async (input) =>{
+                if(input.value !== '' && input.type != 'checkbox'){
                     data[input.name] = input.value
                 }
+                if(input.type == 'checkbox' && input.checked == true){
+
+                    await HabitRequest.completeHabit(id)
+                }
             })
+            await HabitRequest.updateHabit(data, id)
+            location.reload()
         }
     }
-
 }
