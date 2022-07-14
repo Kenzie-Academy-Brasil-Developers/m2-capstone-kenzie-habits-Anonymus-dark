@@ -1,5 +1,5 @@
 import HabitRequest from "../controller/HabitRequest.controller.js"
-
+import HabitosAPI from "../controller/renderizarHabitos.controller.js"
 
 export default class PegarInfHabito {
     constructor() {
@@ -15,13 +15,21 @@ export default class PegarInfHabito {
             this.total.style.display = 'none'
         })
     }
-    handleEvent() {
+    async handleEvent( event ) {
+
+        event.preventDefault()
+
         const tudo = {
             "habit_title": this.titulo.value,
             "habit_description": this.descricao.value,
             "habit_category": this.categoria.value
         }
-        HabitRequest.createHabit(tudo)
-        window.reload()
+        console.log( tudo )
+
+        await HabitRequest.createHabit(tudo)
+
+        HabitosAPI.renderiarHabitos()
+
+        this.total.style.display = "none"
     }
 }
