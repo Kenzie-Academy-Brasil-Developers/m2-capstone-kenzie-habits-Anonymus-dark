@@ -29,7 +29,7 @@
     display: flex;
     justify-content: space-between;
     font-family: var(--font-inter);
-    font-size: var(--font-title-4-tamanho);
+    font-size: var(--font-title-5-tamanho);
     font-weight: 600;
 }
 .modal__header > button{
@@ -129,9 +129,9 @@ option{
 }
 @media (min-width:768px) {
     .modal__board{
-        height: 482px;
+        height: 550px;
         width: 502px;
-        padding: 34px 32px 32px;
+        padding: 38px 32px 32px;
     }
     #título{
         height: 40px;
