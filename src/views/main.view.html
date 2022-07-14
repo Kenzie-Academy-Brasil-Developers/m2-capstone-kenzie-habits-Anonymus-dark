@@ -103,45 +103,68 @@
       </div>
 
     </div>
-<div id="backgroundCriarHabit">
-    <form id="criarHabitoForm">
-      <h4 id="TextHabito">Criar hábito</h4>
-      <h3 id="exit">X</h3>
-      <label id="textTitulo" for="formLabelTitulo">Título</label>
-      <input type="text" id="formLabelTitulo" placeholder="Digitar título" />
-      <label id="textDescricao" for="formLabelDescricao">Descrição</label>
-      <input
-        type="text"
-        id="formLabelDescricao"
-        placeholder="Digitar descrição"
-      />
-      <label id="textCategoria" for="formLabelCategoria">Categoria</label>
-      <select id="formLabelCategoria" name="categoria">
-        <option value="Defaut">Selecionar categoria</option>
-        <option value="Casa">🏠 Casa</option>
-        <option value="Estudo">📚 Estudo</option>
-        <option value="Lazer">⛱️ Lazer</option>
-        <option value="Trabalho">📊 Trabalho</option>
-        <option value="Saude">💜 Saude</option>
-      </select>
-      <input type="submit" id="btnForm" value="Inserir" />
-    </form>
+    <div id="modalCriar">
+      <div id="container">
+          <div id="modal__board">
+              <div id="modal__header">
+                  <span>Criar Habito</span>
+                  <button type="button">X</button>
+              </div>
+              <form id="modal__form">
+                  <div id="modal__form__divs">
+                      <label for="título">Título</label>
+                      <input type="text" name="título" id="título">
+                  </div>
+
+                  <div id="modal__form__divs">
+                      <label for="descrição">Descrição</label>
+                      <input type="text" name="descrição" id="descrição">
+                  </div>
+
+                  <div id="modal__form__divs">
+                      <label for="categoria">Categoria</label>
+                      <select name="categoria" id="categoria">
+                          <option value="Selecionar">Selecionar categoria</option>
+                          <option value="casa">🏠 casa</option>
+                          <option value="estudo">📚 estudo</option>
+                          <option value="lazer">⛱️ lazer</option>
+                          <option value="trabalho">📊 trabalho</option>
+                          <option value="saúde">💜 saúde</option>
+                      </select>
+                  </div>
+                    <div id="buttonInserir">
+                      <button type="submit" id="InserirHabito">Inserir</button>
+                    </div>
+                  
+              </form>
+          </div>
+      </div>
   </div>
 
-    <div id="backgroundEditar">
-      <form action="" id="editarPerfil">
+    <div id="modalEditar">
+      <div id="container">
+        <div id="modal__board">
+          <div id="modal__header">
+            <span>Editar Perfil</span>
+            <button type="button">X</button>
+        </div>
+        <form action="" id="editarPerfil">
   
-        <h4 id="editarPerfilText">Editar perfil</h4>
-        <h3>X</h3>
-        
-        <label id="textNome" for="formEditarNome">Nome</label>
-        <input type="text" id="formEditarNome"  name="usr_name"  placeholder="Júlia Silva Camargo">
-    
+        <div id="modal_form_divs">
+          <label id="textNome" for="formEditarNome">Nome</label>
+          <input type="text" id="formEditarNome"  name="usr_name"  placeholder="Júlia Silva Camargo">
+        </div>
+       <div id="modal_form_divs">
         <label id="textImagem" for="formLabelFoto">URL da imagem do perfil</label>
         <input type="url" id="formEditarFoto"  name="usr_image"  placeholder="https://imagem.com.br">
-        <input type="submit" id="btnEditar" value="Salvar alterações">
+       </div>
+        <div id="botaoInserir">
+          <input type="submit" id="btnEditar" value="Salvar alterações">
+        </div>
   
       </form>
+    </div>
+    </div>
     </div>
 
     <div class="modal">

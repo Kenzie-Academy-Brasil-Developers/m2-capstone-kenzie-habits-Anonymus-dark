@@ -39,7 +39,7 @@ export default class FiltroMain {
     }
 
     abrirCriarHabitos(innerText){
-        const botaoCriar = document.getElementById("backgroundCriarHabit")
+        const botaoCriar = document.getElementById('modalCriar')
         if(innerText === "Criar"){
             botaoCriar.style.display = "unset"
         }
