@@ -103,7 +103,7 @@
       </div>
 
     </div>
-
+<div id="backgroundCriarHabit">
     <form id="criarHabitoForm">
       <h4 id="TextHabito">Criar hábito</h4>
       <h3 id="exit">X</h3>
@@ -126,18 +126,23 @@
       </select>
       <input type="submit" id="btnForm" value="Inserir" />
     </form>
+  </div>
 
-    <form id="editarPerfil">
-
-      <h4 id="editarPerfilText">Editar perfil</h4>
-      <h3>X</h3>
-      <label id="textNome" for="formEditarNome">Nome</label>
-      <input type="text" id="formEditarNome" placeholder="Júlia Silva Camargo">
-      <label id="textImagem" for="formLabelFoto">URL da imagem do perfil</label>
-      <input type="url" id="formEditarFoto" placeholder="https://imagem.com.br">
-      <input type="submit" id="btnEditar" value="Salvar alterações">
-
-    </form>
+    <div id="backgroundEditar">
+      <form action="" id="editarPerfil">
+  
+        <h4 id="editarPerfilText">Editar perfil</h4>
+        <h3>X</h3>
+        
+        <label id="textNome" for="formEditarNome">Nome</label>
+        <input type="text" id="formEditarNome"  name="usr_name"  placeholder="Júlia Silva Camargo">
+    
+        <label id="textImagem" for="formLabelFoto">URL da imagem do perfil</label>
+        <input type="url" id="formEditarFoto"  name="usr_image"  placeholder="https://imagem.com.br">
+        <input type="submit" id="btnEditar" value="Salvar alterações">
+  
+      </form>
+    </div>
 
     <div class="modal">
       <div class="container">
