@@ -1,7 +1,11 @@
+@import url(/src/css/root.css);
+
+
+
 #criarHabitoForm {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 32px;
   gap: 50px;
 
