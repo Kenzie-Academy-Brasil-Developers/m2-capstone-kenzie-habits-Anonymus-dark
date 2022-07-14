@@ -9,7 +9,7 @@
     opacity: 0%;
 
     animation: animacaofundoModal 500ms ease 1 alternate forwards;
-    display: none; 
+    display: none;
 }
 
 @keyframes animacaofundoModal {

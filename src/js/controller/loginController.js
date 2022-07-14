@@ -12,7 +12,7 @@ export default  class pegarDadosDoUsuario{
         .then(res=>{
             const token = localStorage.getItem('@habits-kenzie:token')
             if(JSON.parse(token) === (res.token)){
-                window.location.href="../../index.html"
+                window.location.href="./src/views/main.view.html"
             }
         })
         .catch(err=>{

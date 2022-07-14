@@ -93,7 +93,7 @@ export default class Habito {
 
         const imagem = document.createElement("img")
         imagem.classList.add("botaoEditar__imagem")
-        imagem.src = "./src/assets/img/3Pontos.png"
+        imagem.src = "../assets/img/3Pontos.png"
         imagem.alt = "indicador de conteudo"
 
         button.appendChild( imagem )
