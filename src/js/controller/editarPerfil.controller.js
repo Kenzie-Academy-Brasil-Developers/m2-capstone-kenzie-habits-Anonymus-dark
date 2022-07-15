@@ -5,7 +5,7 @@ export default class Editar {
 
     constructor(){
 
-      this.blocoEditar = document.getElementById("backgroundEditar");
+      this.blocoEditar = document.getElementById("modalEditar");
       this.formulario = document.getElementById("editarPerfil");
       this.entradaNome = document.getElementById("formEditarNome");
       this.entradaImagem = document.getElementById("formEditarFoto");
