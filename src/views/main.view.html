@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../css/index/editarHabito.css">
     <link rel="stylesheet" href="../css/index/editarPerfil.css">
     <link rel="stylesheet" href="../css/index/main.css">
+    <link rel="stylesheet" href="../css/index/dropDown.css">
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -32,10 +33,21 @@
     <header class="cabecalho">
 
       <h1 class="cabecalho__titulo">KenzieHabit</h1>
-      <button class="cabecalho__botaoPerfil">
-        <img class="botaoPerfil__imagem" src="https://static1.conquistesuavida.com.br/articles//4/56/84/@/18404-gente-que-da-prioridade-aos-sentimentos-article_gallery-2.jpg" alt="Homem">
-      </button>
-
+      <div id="dropdown">
+        <button id="btnEditarPerfil" class="cabecalho__botaoPerfil">
+          <img class="botaoPerfil__imagem" src="https://static1.conquistesuavida.com.br/articles//4/56/84/@/18404-gente-que-da-prioridade-aos-sentimentos-article_gallery-2.jpg" alt="Homem">
+        </button>
+        
+        <div id="dropdownContent">
+          <img id="imgPolygon" class="imgPolygon" src="../assets/img/Polygon.png" alt="Polygon" >
+          <img id="imgDrop" class="imgLogout" src="../assets/img/logout.png" alt="logout">
+          <img id="imgDrop" class="imgPerfil" src="../assets/img/userDropDown.png" alt="user">
+          <button id="textEditPerfil" class="text">Editar Perfil</button>
+          <button id="textClose" class="text">Sair do app</button>
+        </div>
+        
+      </div>
+    
     </header>
 
     <div class="perfil">
@@ -103,43 +115,30 @@
       </div>
 
     </div>
-    <div id="modalCriar">
-      <div id="container">
-          <div id="modal__board">
-              <div id="modal__header">
-                  <span>Criar Habito</span>
-                  <button type="button">X</button>
-              </div>
-              <form id="modal__form">
-                  <div id="modal__form__divs">
-                      <label for="título">Título</label>
-                      <input type="text" name="título" id="título">
-                  </div>
-
-                  <div id="modal__form__divs">
-                      <label for="descrição">Descrição</label>
-                      <input type="text" name="descrição" id="descrição">
-                  </div>
-
-                  <div id="modal__form__divs">
-                      <label for="categoria">Categoria</label>
-                      <select name="categoria" id="categoria">
-                          <option value="Selecionar">Selecionar categoria</option>
-                          <option value="casa">🏠 casa</option>
-                          <option value="estudo">📚 estudo</option>
-                          <option value="lazer">⛱️ lazer</option>
-                          <option value="trabalho">📊 trabalho</option>
-                          <option value="saúde">💜 saúde</option>
-                      </select>
-                  </div>
-                    <div id="buttonInserir">
-                      <button type="submit" id="InserirHabito">Inserir</button>
-                    </div>
-                  
-              </form>
-          </div>
-      </div>
-  </div>
+    <div id="backgroundCriarHabit">
+      <form id="criarHabitoForm">
+        <h4 id="TextHabito">Criar hábito</h4>
+        <h3 id="exit">X</h3>
+        <label id="textTitulo" for="formLabelTitulo">Título</label>
+        <input type="text" id="formLabelTitulo" placeholder="Digitar título" />
+        <label id="textDescricao" for="formLabelDescricao">Descrição</label>
+        <input
+          type="text"
+          id="formLabelDescricao"
+          placeholder="Digitar descrição"
+        />
+        <label id="textCategoria" for="formLabelCategoria">Categoria</label>
+        <select id="formLabelCategoria" name="categoria">
+          <option value="Defaut">Selecionar categoria</option>
+          <option value="Casa">🏠 Casa</option>
+          <option value="Estudos">📚 Estudo</option>
+          <option value="Lazer">⛱️ Lazer</option>
+          <option value="Trabalho">📊 Trabalho</option>
+          <option value="Saude">💜 Saude</option>
+        </select>
+        <input type="submit" id="btnForm" value="Inserir" />
+      </form>
+    </div>
 
     <div id="modalEditar">
       <div id="container">
@@ -210,6 +209,9 @@
           </div>
       </div>
   </div>
+
+
+
   </body>
 </html>
 
