@@ -46,7 +46,7 @@ export default class Editar {
 
     fechar( event ){
       
-      if( event.target.innerText === "X" || event.target.id === "backgroundEditar"){
+      if( event.target.innerText === "X" || event.target.id === "container" || event.target.id === "btnEditar"){
       
         this.blocoEditar.style.display = "none"
       }
