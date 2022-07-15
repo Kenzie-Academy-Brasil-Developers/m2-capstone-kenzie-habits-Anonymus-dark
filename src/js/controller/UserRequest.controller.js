@@ -26,7 +26,17 @@ export default class UserRequest extends Request {
             body: JSON.stringify(newImage)
         })
         .then(res => res.json())
-        .then(res => res)
+        .then(res => {
+            
+            const objUsuario = {
+                usr_email:res.usr_email,
+                usr_image:res.usr_image,
+                usr_name:res.usr_name,
+              }
+
+              localStorage.setItem('@habits-kenzie:user', JSON.stringify(objUsuario))
+
+        })
         .catch(err => console.log(err))
     }
 }
