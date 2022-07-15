@@ -6,7 +6,7 @@
 
 #dropdownContent {
     position: absolute;
-    top: 55px;
+    top: 52px;
     display: none;
     background-color: white;
     width: 170px;
@@ -118,7 +118,7 @@
     
     width: 20px;
     position: absolute;
-    top: -5px;
+    top: -3px;
     right: 10px;
     
     

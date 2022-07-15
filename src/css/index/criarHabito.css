@@ -5,15 +5,15 @@
 #criarHabitoForm {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 32px;
   gap: 50px;
 
   position: absolute;
   width: 502px;
   height: 482px;
-  left: 550px;
-  top: 114px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
   background-color: #FFFFFF;
   border-radius: 8px;
@@ -185,12 +185,14 @@ option {
     height: 0px;
     left: 446px;
     top: 45px;
-    font-family: 'Nunito';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 17px;
     line-height: 0px;
     color: #ADB5BD;
+    cursor: pointer;
+    
     
 }
 
